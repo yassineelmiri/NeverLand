@@ -1,0 +1,519 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    cursor: none;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+@font-face {
+    font-family: a;
+    src: url(./PlayfairDisplay-Regular.9647c7fa.ttf);
+}
+@font-face {
+    font-family: b;
+    src: url(./Roobert-Bold.005c37fb.ttf);
+}
+@font-face {
+    font-family: c;
+    src: url(./Roobert-Regular.286574d1.ttf);
+}
+#main{
+    position: relative;
+    overflow: hidden;
+}
+#page{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #FFFAF0;
+}
+canvas{
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+#cursor{
+    pointer-events: none;
+    height: 25px;
+    width: 25px;
+    background-color: #000;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 9999999999999999;
+    -webkit-transition: ease .1s;
+    -o-transition: ease .1s;
+    transition: ease .1s;
+}
+svg{
+    position: absolute;
+    height: 3.6vw;
+    width: 3.6vw;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    top: 5%;
+    z-index: 9999;
+}
+#menu{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+    height: 1.2vw;
+    width: 2.5vw;
+    position: absolute;
+    /* background-color: red; */
+    position: absolute;
+    right: 5%;
+    top: 7%;
+    z-index: 9999999999;
+}
+.line{
+    /* top: 50%; */
+    position: relative;
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+}
+#page>h1{
+    font-family: a;
+    font-size: 5vw;
+    font-weight: 100;
+    line-height: 1;
+    position: absolute;
+    color: #fff;     
+    text-align: center;
+    bottom: 40%;
+    right: 3%;
+    width: 30%;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+    letter-spacing: -14px;
+    z-index:99999999;
+}
+#page>h4{
+    position: absolute;
+    font-family: c;
+    color: #fff;     
+    font-size: 20px;
+    text-align: center;
+    font-weight: 400;
+    line-height: 1.5;
+    top: 65%;
+    left: 82%;
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);  
+    width: 27%;
+    z-index: 9999;
+}
+#awards{
+    position: absolute;
+    top: 50%;
+    color: #fff;
+    height: 23%;
+    width: 4%;
+    background-color: #000;
+    white-space: nowrap;
+    text-align: center;
+    z-index: 9999999999;
+}
+#awards>h1{
+    position: absolute;
+    font-family: b;
+    left: 50%;
+    top: 4%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+}
+#awards>h3{
+    position: relative;
+    rotate: -90deg;
+    top: 70%;
+    font-weight: 500;
+    font-family: c;
+    left: -7%;
+}
+#scroll-to{
+    position: absolute;
+    rotate: -90deg;
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    bottom: 20%;
+    right: 0%;
+    gap: 5px;
+    font-family: c;
+    z-index: 999999;
+}
+#scroll-to>h3{
+    font-weight: 400;
+}
+#scroll-to>svg{
+    left: -50%;
+    top: 60%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    position: absolute;
+    rotate: 90deg;
+    z-index: 99999999;
+}
+
+#insta{
+    position: relative;
+    height: 200%;
+    width: 20%;
+    
+}
+#page>img{
+    position: absolute;
+    z-index: 99999;
+    width: 4%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    top: 4.6%;
+    opacity:0;
+}
+
+
+
+
+
+
+
+
+
+
+#page1{
+    height: 180vh;
+    width: 100vw;
+    background-color: #FFFAF0;
+}
+#page1>h1{
+    position: relative;
+    font-family: a;
+    font-size: 80px;
+    font-weight: 100;
+    letter-spacing: -5px;
+    line-height: 1;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    text-align: center;
+    top: 13%;
+}
+#page1>img{
+    position: relative;
+    z-index: 99999;
+    top: -70%;
+    left: 15%;
+    -webkit-transform:translateX(-50%);
+        -ms-transform:translateX(-50%);
+            transform:translateX(-50%);
+    width: 80%;
+}
+#page1>h5{
+    position: relative;
+    left: 17%;
+    top: 32%;
+    font-size: 27px;
+    color: #000;
+    font-family: c;
+    font-weight: 300;
+}
+#page1>h2{
+    position: relative;
+    padding-top: 15%;
+    font-size: 70px;
+    left: 11%;
+    text-align: center;
+    color: #000;
+    font-family: a;
+    font-weight: 300;
+    top: 20%;
+    line-height: 1;
+    letter-spacing: -11px;
+    width: 80%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#page2{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #FFFAF0;
+}
+#page2>h4{
+    font-size: 30px;
+    font-family: c;
+    font-weight: 400;
+}
+#page2>h1{
+    font-family: a;
+    font-size: 80px;
+    font-weight: 100;
+    text-align: center;
+    line-height: 1;
+    letter-spacing: -12px;
+    padding-top: 7%;
+    width: 90%;
+
+}
+#page2>h3{
+    padding-top: 7%;
+    font-family: a;
+    font-size: 80px;
+    font-weight: 100;
+    text-align: center;
+    line-height: 1;
+    letter-spacing: -11px;
+    width: 90%;
+
+}
+
+
+
+
+
+
+
+
+
+
+#page3{
+    height: 100vh;
+    width: 100vw;
+    /* background-color: green; */
+}
+#half{
+    margin-top: -36.44%;
+    height: 50%;
+    width: 100%;
+    background-color: #FFFAF0;
+}
+#page3>img{
+   margin-top: 15%;    
+   margin-left: 70%;
+   scale: 1.4;
+}
+#text1{
+    position: absolute;
+    height: 45%;
+    width: 60%;
+    /* background-color: red;    */
+    left: 10%;
+    /* top: 50%; */
+    top: 100%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+
+#text1>h4{
+    font-size: 20px;
+    font-family: c;
+    font-weight: 100;
+}
+#text1>h1{
+    font-weight: 600;
+    font-size: 50px;
+    font-family: a;
+    padding-top: 50px;
+    padding-left: 20px;
+    line-height: 1.2;
+}
+#text2{
+    position: absolute;
+    height: 45%;
+    width: 55%;
+    /* background-color: red;    */
+    left: 10%;
+    /* top: 50%; */
+    top: 150%;
+}
+
+#text2>h4{
+    font-size: 20px;
+    font-family: c;
+    font-weight: 100;
+}
+#text2>h1{
+    font-weight: 600;
+    font-size: 50px;
+    font-family: a;
+    padding-top: 50px;
+    padding-left: 20px;
+    line-height: 1.2;
+}
+#text3{
+    position: absolute;
+    height: 45%;
+    width: 55%;
+    /* background-color: red;    */
+    left: 10%;
+    top: 150%;
+    /* top: 150%; */
+}
+
+#text3>h4{
+    font-size: 20px;
+    font-family: c;
+    font-weight: 100;
+}
+#text3>h1{
+    font-weight: 600;
+    font-size: 50px;
+    font-family: a;
+    padding-top: 50px;
+    padding-left: 20px;
+    line-height: 1.2;
+}
+
+
+
+
+
+
+
+
+
+
+#page4{
+    height: 100vh;
+    width: 100vw;
+}
+
+#brands{
+    height: 100%;
+    position: relative;
+    top: -20%;
+    width: 100%;
+}
+.titles{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 12%;
+    top: 10%;
+    position: relative;
+    margin-bottom: 20px;
+    height: 15%;
+    width: 100%;
+}
+.titles>img{
+    width: 8%;
+}
+.titles>#bn{
+    width: 3%;
+}
+.titles:nth-child(2){
+    gap:12%;
+}
+.titles>.hn{
+    width: 4%;
+}
+.titles:nth-child(3){
+    gap: 8%;
+}
+.titles:nth-child(3)>img{
+    width: 6%;
+}
+.titles>#sn1{
+    width: 2.5%;
+}
+.titles>#sn2{
+    width: 3%;
+}
+#page4>h1{
+    font-family: a;
+    font-size: 70px;
+    position: relative;
+    top: 70%;
+    left: 40%;
+    width: 26%;
+    letter-spacing: -10px;
+}
+#page5{
+    height: 100vh;
+    width: 100vw;
+}
+#pickup{
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+#pickup>canvas{
+    max-width: 100vw;
+    max-height: 100vh;
+}
+#page5>h1{
+    width: 47%;
+    position: absolute;
+    z-index: 9999;
+    font-family: a;
+    font-weight: 600;
+    font-size: 40px;
+    color:#fff;
+    letter-spacing: -6px;
+    padding-top: 20%;
+    padding-left: 5%;
+}
